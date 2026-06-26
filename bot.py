@@ -105,7 +105,7 @@ class PortfolioBot:
                     self.bot.send_message(chat_id, blocks.get("hobbies", "Информация загружается..."), reply_markup=self.get_inline_back())
                 elif text == btns.get("links"):
                     markup = types.InlineKeyboardMarkup()
-                    markup.add(types.InlineKeyboardButton("🐙 Открыть GitHub", url=self.config.get("GITHUB_URL", "https://github.com/n8097703-crypto/nurai.konkyrs_bot.git")))
+                    markup.add(types.InlineKeyboardButton("🐙 Открыть GitHub", url=self.config.get("https://github.com/n8097703-crypto/nurai.konkyrs_bot.git", "https://github.com/n8097703-crypto/nurai.konkyrs_bot.git")))
                     markup.add(types.InlineKeyboardButton("⬅️ Назад", callback_data="back_main"))
                     self.bot.send_message(chat_id, blocks.get("links", "Ссылки..."), reply_markup=markup)
                 elif text == btns.get("works"):
